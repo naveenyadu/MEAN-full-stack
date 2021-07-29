@@ -1,0 +1,618 @@
+Section 0
+
+naveen@DESKTOP-07P8L3E MINGW64 ~
+$ mkdir project_dir
+
+naveen@DESKTOP-07P8L3E MINGW64 ~
+$ cd project_dir
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/project_dir
+$ git init
+Initialized empty Git repository in C:/Users/naveen/project_dir/.git/
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/project_dir (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/project_dir (master)
+$ git add index.html
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/project_dir (master)
+$ git commit -m "first commit"
+[master (root-commit) 6dcf3ce] first commit
+ 1 file changed, 12 insertions(+)
+ create mode 100644 index.html
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/project_dir (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        info.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/project_dir (master)
+$ git rm --cached index.html
+rm 'index.html'
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/project_dir (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+        info.txt
+
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/project_dir (master)
+$ touch .gitignore        //type *.txt in .gitignore to ignore .txt files
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/project_dir (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        index.html
+
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/project_dir (master)
+$ git add index.html
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/project_dir (master)
+$ git commit -m "second commit"
+[master 5b7d04e] second commit
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/project_dir (master)
+$ git log
+commit 5b7d04ee9df971b74fb5a13794aed5c3a42349e8 (HEAD -> master)
+Author: unknown <naveenyadu988gmail.com>
+Date:   Thu Jul 29 15:48:10 2021 +0530
+
+    second commit
+
+commit 6dcf3ce9837ea24d77e7ea7f824639d3fdf5884c
+Author: unknown <naveenyadu988gmail.com>
+Date:   Thu Jul 29 15:44:38 2021 +0530
+
+    first commit
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/project_dir (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/project_dir (master)
+$ git restore index.html
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/project_dir (master)
+$ git add index.html
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/project_dir (master)
+$ git restore index.html
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/project_dir (master)
+$ git config --global alias.my-add add
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/project_dir (master)
+$ git my-add index.html
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/project_dir (master)
+$ git commit -m "third commit"
+[master 3f12274] third commit
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/project_dir (master)
+$ git log
+commit 3f1227442a382997de1ade897eb67785d904025a (HEAD -> master)
+Author: unknown <naveenyadu988gmail.com>
+Date:   Thu Jul 29 15:57:11 2021 +0530
+
+    third commit
+
+commit 5b7d04ee9df971b74fb5a13794aed5c3a42349e8
+Author: unknown <naveenyadu988gmail.com>
+Date:   Thu Jul 29 15:48:10 2021 +0530
+
+    second commit
+
+commit 6dcf3ce9837ea24d77e7ea7f824639d3fdf5884c
+Author: unknown <naveenyadu988gmail.com>
+Date:   Thu Jul 29 15:44:38 2021 +0530
+
+    first commit
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/project_dir (master)
+$ git reset --hard
+HEAD is now at 3f12274 third commit
+
+
+Section 1 (HTML assignments)
+
+naveen@DESKTOP-07P8L3E MINGW64 ~
+$ git --version
+git version 2.32.0.windows.2
+
+naveen@DESKTOP-07P8L3E MINGW64 ~
+$ mkdir Assignments
+
+naveen@DESKTOP-07P8L3E MINGW64 ~
+$ cd Assignments
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments
+$ git init
+Initialized empty Git repository in C:/Users/naveen/Assignments/.git/
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (master)
+$ touch README.txt
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (master)
+$ git add README.txt
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   README.txt
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (master)
+$ git commit -m "first commit"
+[master (root-commit) edad3fe] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.txt
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (master)
+$ git branch html-assignments
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (master)
+$ git checkout html-assignments
+Switched to branch 'html-assignments'
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (html-assignments)
+$ git status
+On branch html-assignments
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        html.txt
+        html1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (html-assignments)
+$ git add .
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (html-assignments)
+$ git commit -m "second commit"
+[html-assignments f761a19] second commit
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 html.txt
+ create mode 100644 html1.txt
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (html-assignments)
+$ git status
+On branch html-assignments
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   html.txt
+        modified:   html1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (html-assignments)
+$ git add .
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (html-assignments)
+$ git commit -m "third commit"
+[html-assignments 7339215] third commit
+ 2 files changed, 2 insertions(+)         //without committing we can not switch to branch
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (html-assignments)
+$ git checkout master
+Switched to branch 'master'
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (master)
+$ git add .
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (master)
+$ git commit -m "fourth commit"
+[master 21b5c55] fourth commit
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (master)
+$ git checkout html-assignments
+Switched to branch 'html-assignments'
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (html-assignments)
+$ git status
+On branch html-assignments
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   html.txt
+        modified:   html1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (html-assignments)
+$ git add .
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (html-assignments)
+$ git commit -m "fifth commit"
+[html-assignments 3ca1c2e] fifth commit
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (html-assignments)
+$ git checkout master
+Switched to branch 'master'
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (master)
+$ git merge html-assignments
+Merge made by the 'recursive' strategy.
+ html.txt  | 1 +
+ html1.txt | 1 +
+ 2 files changed, 2 insertions(+)
+ create mode 100644 html.txt
+ create mode 100644 html1.txt
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (master)
+$ git branch -d html-assignments
+Deleted branch html-assignments (was 3ca1c2e).
+
+Section 2 (CSS assignments)
+ 
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (master)
+$ git branch css-assignments
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (master)
+$ git checkout css-assignments
+Switched to branch 'css-assignments'
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (css-assignments)
+$ git status
+On branch css-assignments
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        css.txt
+        css1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (css-assignments)
+$ git add .
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (css-assignments)
+$ git commit -m "first commit"
+[css-assignments 64ed718] first commit
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 css.txt
+ create mode 100644 css1.txt
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (css-assignments)
+$ git status
+On branch css-assignments
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (css-assignments)
+$ git add .
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (css-assignments)
+$ git commit -m "second commit"
+[css-assignments 3b74aa7] second commit
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (css-assignments)
+$ git checkout master
+Switched to branch 'master'
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (master)
+$ git add .
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (master)
+$ git commit -m "third commit"
+[master f5937f6] third commit
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (master)
+$ git add .
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (master)
+$ git commit -m "third commit"
+[master 1a84b9b] third commit
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (master)
+$ git checkout css-assignments
+Switched to branch 'css-assignments'
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (css-assignments)
+$ git status
+On branch css-assignments
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   css.txt
+        modified:   css1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (css-assignments)
+$ git add .
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (css-assignments)
+$ git commit -m "fourth commit"
+[css-assignments f455c29] fourth commit
+ 2 files changed, 2 insertions(+)
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (css-assignments)
+$ git checkout master
+Switched to branch 'master'
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (master)
+$ git merge css-assignments
+Merge made by the 'recursive' strategy.
+ css.txt  | 1 +
+ css1.txt | 1 +
+ 2 files changed, 2 insertions(+)
+ create mode 100644 css.txt
+ create mode 100644 css1.txt
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (master)
+$ git branch -d css-assignments
+Deleted branch css-assignments (was f455c29).
+
+Section 3 (Javascript assignments)
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (master)
+$ git branch js-assignments
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (master)
+$ git checkout js-assignments
+Switched to branch 'js-assignments'
+M       README.txt
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (js-assignments)
+$ git status
+On branch js-assignments
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        js.txt
+        js1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (js-assignments)
+$ git add .
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (js-assignments)
+$ git commit -m "first commit"
+[js-assignments 49c33e0] first commit
+ 3 files changed, 1 insertion(+)
+ create mode 100644 js.txt
+ create mode 100644 js1.txt
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (js-assignments)
+$ git status
+On branch js-assignments
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (js-assignments)
+$ git add .
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (js-assignments)
+$ git commit -m "second commit"
+[js-assignments 936e5b7] second commit
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (js-assignments)
+$ git checkout master
+Switched to branch 'master'
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (master)
+$ git add .
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (master)
+$ git commit -m "third commit"
+[master c18030b] third commit
+ 1 file changed, 1 insertion(+)
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (master)
+$ git checkout js-assignments
+Switched to branch 'js-assignments'
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (js-assignments)
+$ git status
+On branch js-assignments
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   js.txt
+        modified:   js1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (js-assignments)
+$ git add .
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (js-assignments)
+$ git commit -m "fourth commit"
+[js-assignments d050d58] fourth commit
+ 2 files changed, 2 insertions(+)
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (js-assignments)
+$ git checkout master
+Switched to branch 'master'
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (master)
+$ git merge js-assignments
+Merge made by the 'recursive' strategy.
+ js.txt  | 1 +
+ js1.txt | 1 +
+ 2 files changed, 2 insertions(+)
+ create mode 100644 js.txt
+ create mode 100644 js1.txt
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (master)
+$ git branch -d js-assignments
+Deleted branch js-assignments (was d050d58).
+
+remoting
+Section 3
+
+Create a repository freshersbatch-oct16
+
+naveen@DESKTOP-07P8L3E MINGW64 ~
+$ mkdir Assignments
+
+naveen@DESKTOP-07P8L3E MINGW64 ~
+$ cd Assignments
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments
+$ git init
+Initialized empty Git repository in C:/Users/naveen/Assignments/.git/
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (master)
+$ touch samplefile.txt
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (master)
+$ git add .
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (master)
+$ git commit -m "commit"
+[master (root-commit) bcd7a19] commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 samplefile.txt
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (master)
+$ git remote
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (master)
+$ git remote add origin https://github.com/naveenyadu/fresherbatch-oct16
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (master)
+$ git remote
+origin
+
+naveen@DESKTOP-07P8L3E MINGW64 ~/Assignments (master)
+$ git push -u origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Writing objects: 100% (3/3), 242 bytes | 242.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/naveenyadu/fresherbatch-oct16
+   638e170..9bdc37a  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+
+Section 4
+
+commit and push Sampleproj to github repository using eclipse
+
+1. Open github account and create a repository named Sampleproj.
+2. Now open the eclipse IDE and from then open perspective --> search for Git Repositories and add it.
+3. Then create a clone Git Repository and enter the url from the repository u created and finish it.
+4. You can see Sampleproj under Git Repository.
+5. Now create a new java project named Sampleproj and right click > team > share project.
+6. Enter the repository Sampleproj under Git Repository and finish it.
+7. Again right click Sampleproj java project > team > commit.
+8. You can see all the files under unstaged , move them to staged and click commit and push.
+9. It will ask for your github credentials , enter them.
+10. Now check your Sampleproj Repository you can find Sampleproj folder.
+
+For collaboration 
+
+using fork we can make a duplicate copy of other team member project and if u have done any changes or modified
+any files in the project and if you want to collaborate create pull request with what changes you did.
+You have to wait for the response from from the team member.He may accept the request and merge those files.
+ 
